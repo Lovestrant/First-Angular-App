@@ -1,0 +1,46 @@
+$background: rgb(167, 161, 161);
+
+@mixin contentDivs($hStyle, $btnwidth,$btnheight, $backgroundColor) {
+  h6, h5 {
+    color: $hStyle;
+    margin-left: 30px;
+  }
+  h4 {
+    padding-top: 30px;
+  }
+  button {
+    width: $btnwidth;
+    height: $btnheight;
+    color: $backgroundColor;
+    background-color: white;
+    margin: 30px;
+
+  }
+  background-color: $backgroundColor;
+  width: auto;
+  margin: 10px;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.body{
+    background-color: $background;
+}
+
+.generalDiv {
+
+    height: 100%;
+    h4,p {
+        margin-left: 30px;
+    }
+    #firstDiv {
+      @include contentDivs(white,150px,40px,rgb(131, 146, 241));
+    }
+    #secondDiv {
+      @include contentDivs(white,150px,40px,rgba(18, 5, 65, 0.553));
+    }
+    #thirdDiv {
+      @include contentDivs(white,150px,40px,rgb(230, 108, 148));
+    }
+}
